@@ -117,16 +117,14 @@ namespace lab9TA
         }
 
         static void Pyramid_Sort(Int32[] arr, Int32 len)
-        {
-            //step 1: building the pyramid
+        {      
             for (Int32 i = len / 2 - 1; i >= 0; --i)
             {
                 long prev_i = i;
                 i = add2pyramid(arr, i, len);
                 if (prev_i != i) ++i;
             }
-
-            //step 2: sorting
+            
             Int32 buf;
             for (Int32 k = len - 1; k > 0; --k)
             {
